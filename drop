@@ -1,0 +1,119 @@
+#Star Wars + Drop
+use_synth :piano
+use_bpm 100
+a_variable = 'x'
+x= :bd_tek
+#first
+play :g2, sustain: 10
+sleep 1
+play :g2
+sleep 1
+play :g2
+sleep 1
+play :e2
+sleep 0.75
+play :bb2
+sleep 0.25
+play :g2
+sleep 1
+play :e2
+sleep 0.75
+play :bb2
+sleep 0.25
+play :g2
+sleep 2
+play :d2, sustain: 10
+sleep 1
+play :d2
+sleep 1
+play :d2
+sleep 1
+play :eb2
+sleep 0.75
+play :bb2
+sleep 0.25
+play :gb2
+sleep 1
+play :e2
+sleep 0.75
+play :b2
+sleep 0.25
+play :g2
+sleep 2
+#second
+play :g2, sustain: 10
+sleep 1
+play :g2
+sleep 1
+play :g2
+sleep 1
+play :e2
+sleep 0.75
+play :bb2
+sleep 0.25
+play :g2
+sleep 1
+play :e2
+sleep 0.75
+play :bb2
+sleep 0.25
+play :g2
+sleep 2
+play :d2, sustain: 10
+sleep 1
+play :d2
+sleep 1
+play :d2
+sleep 1
+play :eb2
+sleep 0.75
+play :bb2
+sleep 0.25
+play :gb2
+sleep 1
+play :e2
+sleep 0.75
+play :b2
+sleep 0.25
+play :g2
+sleep 2
+#third
+use_bpm 160
+with_fx :wobble do
+  play :g2, sustain: 10
+  sleep 1
+  play :g2
+  sleep 1
+  play :g2
+  sleep 1
+  play :e2
+  sleep 0.75
+  play :bb2
+  sleep 0.25
+  play :g2
+  sleep 1
+  play :e2
+  sleep 0.75
+  play :bb2
+  sleep 0.25
+  play :g2
+  sleep 1.5
+  play :d2, sustain: 10
+  sleep 1
+  play :d2
+  sleep 1
+  play :d2
+  sleep 1
+  play :eb2
+  sleep 0.75
+  play :bb2
+  sleep 0.25
+  play :gb2
+  sleep 1
+  play :e2
+  sleep 0.75
+  play :b2
+  sleep 0.25
+  play :g2
+  sleep 1.5
+end
