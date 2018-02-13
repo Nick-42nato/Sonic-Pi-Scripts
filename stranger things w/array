@@ -1,0 +1,20 @@
+# Stranger Things Main Theme
+# NOTE: Each measure's total sleep adds up to 4 because the time signature is 4/4
+use_bpm 160
+use_synth :saw
+notes = [:c2, :e2, :g2, :b2, :c3, :b2, :g2, :e2]
+
+
+live_loop :main_theme do
+  with_fx :distortion do
+    index = 0
+    # we set index at zero so note c2 starts first
+    8.times do
+      # we put 8 times bcause its 8 notes
+      play notes[index]
+      sleep 0.5
+      index = index + 1
+      # we put index plus 1 so the next note plays
+    end
+  end
+end
