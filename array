@@ -1,0 +1,117 @@
+#Star Wars + Drop +array
+use_synth :piano
+use_bpm 100
+a_variable = 'x'
+x= :bd_tek
+#first
+i=0
+a_variable = 'a'
+a_variable = 'b'
+a = [:g2, :g2, :e2, :bb2, :g2, :e2, :bb2, :g2, :d2, :d2, :eb2, :bb2, :gb2, :e2, :b2, :g2]
+b = [1, 1, 0.75, 0.25, 1, 0.75, 0.25, 2, 1, 1, 1, 0.75, 0.25, 2]
+
+loop do
+  play a[i]
+  sleep b[i]
+  i=i+1
+end
+
+#second
+use_bpm 120
+play :g2, sustain: 10
+sample :drum_bass_hard, amp: 5
+sleep 1
+play :g2
+sample :drum_snare_hard, amp: 5
+sleep 1
+play :g2
+sample :drum_bass_hard, amp: 5
+sleep 1
+play :e2
+sample :drum_snare_hard, amp: 5
+sleep 0.75
+play :bb2
+sample :drum_bass_hard, amp: 5
+sleep 0.25
+play :g2
+sample :drum_snare_hard, amp: 5
+sleep 1
+play :e2
+sample :drum_bass_hard, amp: 5
+sleep 0.75
+play :bb2
+sample :drum_snare_hard, amp: 5
+sleep 0.25
+play :g2
+sample :drum_bass_hard, amp: 5
+sleep 2
+play :d2, sustain: 10
+sample :drum_snare_hard, amp: 5
+sleep 1
+play :d2
+sample :drum_bass_hard, amp: 5
+sleep 1
+play :d2
+sample :drum_snare_hard, amp: 5
+sleep 1
+play :eb2
+sample :drum_bass_hard, amp: 5
+sleep 0.75
+play :bb2
+sample :drum_snare_hard, amp: 5
+sleep 0.25
+play :gb2
+sample :drum_bass_hard, amp: 5
+sleep 1
+play :e2
+sample :drum_snare_hard, amp: 5
+sleep 0.75
+play :b2
+sample :drum_bass_hard, amp: 5
+sleep 0.25
+play :g2
+sample :drum_snare_hard, amp: 5
+sleep 2
+#third
+use_bpm 160
+with_fx :wobble do
+  with_fx :reverb do
+    play :g2, sustain: 10
+    sleep 1
+    play :g2
+    sleep 1
+    play :g2
+    sleep 1
+    play :e2
+    sleep 0.75
+    play :bb2
+    sleep 0.25
+    play :g2
+    sleep 1
+    play :e2
+    sleep 0.75
+    play :bb2
+    sleep 0.25
+    play :g2
+    sleep 1.5
+    play :d2, sustain: 10
+    sleep 1
+    play :d2
+    sleep 1
+    play :d2
+    sleep 1
+    play :eb2
+    sleep 0.75
+    play :bb2
+    sleep 0.25
+    play :gb2
+    sleep 1
+    play :e2
+    sleep 0.75
+    play :b2
+    sleep 0.25
+    play :g2
+    sleep 1.5
+  end
+end
+
