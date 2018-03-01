@@ -12,7 +12,7 @@ use_synth_defaults cutoff: 80
 kanye_vocals ="C:/Users/nicholas_fortunato/Downloads/sonic_pi_challenge_7_custom_samples/sonic_pi_challenge_7_custom_samples/love_lockdown.wav"
 kanye_pt2 = "C:/Users/nicholas_fortunato/Desktop/love_lockdown_full_song.wav"
 sample_used = :bd_808
-#above defines the samples as the soundtracks I linked
+#above defines the samples as the soundtracks I linked which is called a function
 define :drum_beat do
   sample sample_used, amp: 2
   sleep 0.5
