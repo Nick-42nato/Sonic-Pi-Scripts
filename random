@@ -76,7 +76,7 @@ sleep 2
 use_bpm 160
 with_fx :wobble do
   with_fx :reverb do
-    play :g2, sustain: rrand(2,10)
+    play :g2, sustain: rrand(2,10) #this is where I randomize the length of how long the note g2 is played or sustained.
     sleep 1
     play :g2
     sleep 1
