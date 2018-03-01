@@ -9,13 +9,13 @@ a_variable = 'a'
 a_variable = 'b'
 a = [:g2, :g2, :e2, :bb2, :g2, :e2, :bb2, :g2, :d2, :d2, :eb2, :bb2, :gb2, :e2, :b2, :g2]
 b = [1, 1, 0.75, 0.25, 1, 0.75, 0.25, 2, 1, 1, 1, 0.75, 0.25, 2]
-#array
+#array which lists all the notes and is then called below using the variables, a and b
 loop do
   play a[i]
   sleep b[i]
   i=i+1
 end
-#calls array
+#calls array then sleeps^
 #second
 use_bpm 120
 play :g2, sustain: 10
