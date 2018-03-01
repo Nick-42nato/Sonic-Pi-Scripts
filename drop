@@ -1,6 +1,7 @@
 #Star Wars + Drop
 use_synth :piano
 use_bpm 100
+#melody
 a_variable = 'x'
 x= :bd_tek
 #first
@@ -40,7 +41,7 @@ play :b2
 sleep 0.25
 play :g2
 sleep 2
-#second is where the beats begin to spead up creating the drop or build-up
+#second is where the beats begin to spead up creating the build-up
 use_bpm 120
 play :g2, sustain: 10
 sleep 1
@@ -78,7 +79,7 @@ play :b2
 sleep 0.25
 play :g2
 sleep 2
-#third
+#third is where the drop occurs
 use_bpm 160
 with_fx :wobble do
   play :g2, sustain: 10
