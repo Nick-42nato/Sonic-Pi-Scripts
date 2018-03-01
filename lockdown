@@ -1,0 +1,53 @@
+=begin
+
+TASK 1: Import the sample from "Love Lockdown" into this buffer and play it using the live_loop on line 39.
+
+TASK 2: Use the .mp3 file and Audacity to take another sample from the song, and incorporate it into this script.
+
+=end
+
+use_bpm 120
+use_synth :dtri
+use_synth_defaults cutoff: 80
+kanye_vocals ="C:/Users/nicholas_fortunato/Downloads/sonic_pi_challenge_7_custom_samples/sonic_pi_challenge_7_custom_samples/love_lockdown.wav"
+kanye_pt2 = "C:/Users/nicholas_fortunato/Desktop/love_lockdown_full_song.wav"
+sample_used = :bd_808
+#above defines the samples as the soundtracks I linked
+define :drum_beat do
+  sample sample_used, amp: 2
+  sleep 0.5
+  sample sample_used, amp: 2
+  sleep 1.5
+  sample sample_used, amp: 2
+  sleep 2
+end
+#defines drum beat
+
+define :synth_sound do
+  play :cs2
+  sleep 0.5
+  play :cs2
+  sleep 0.5
+  play :e2, sustain: 0.5
+  sleep 1
+  # play two notes concurrently (at the same time)
+  play :cs2, sustain: 1, detune: 0.12
+  play :cs1, sustain: 1
+  sleep 2
+end
+#defines the synth
+live_loop :drum do
+  drum_beat
+end
+live_loop :kanye_vocals do
+  sample kanye_vocals, amp: 3
+  sleep 8
+end
+live_loop :sound do
+  synth_sound
+end
+live_loop :kanye_pt2 do
+  sample kanye_pt2
+  sleep 16
+end
+#plays each defined function; both kanye samples play at the same time but in pocket because of the sleep times used
