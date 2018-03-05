@@ -9,7 +9,7 @@ a_variable = 'a'
 a_variable = 'b'
 a = [:g2, :g2, :e2, :bb2, :g2, :e2, :bb2, :g2, :d2, :d2, :eb2, :bb2, :gb2, :e2, :b2, :g2]
 b = [1, 1, 0.75, 0.25, 1, 0.75, 0.25, 2, 1, 1, 1, 0.75, 0.25, 2]
-#array listing all the notes and sleep times
+#array listing all the notes and sleep times then calls the array to play using variables a and b.
 loop do
   play a[i]
   sleep b[i]
