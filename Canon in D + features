@@ -1,4 +1,4 @@
-#canon in D
+#canon in D w/ custom features
 use_bpm 70
 use_synth :piano
 i=0
@@ -505,9 +505,10 @@ define :melody2 do
   sleep 0.5
 end
 
-melody2
+melody2#I call the function to play
 #part 8 is where I include another sample
 1.times do
   sample canon_end, amp: 3
   sleep 58
 end
+#THE END
