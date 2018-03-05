@@ -1,0 +1,513 @@
+#canon in D
+use_bpm 70
+use_synth :piano
+i=0
+a_variable='a'
+a_variable='b'
+a_variable='c'
+a = [:E5, :D5, :C5, :B4, :A4, :G4, :A4, :B4]
+b = [:C3, :G3, :A3, :E2, :F2, :A2, :F2, :G2]
+c = [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5]
+#the array lists the different notes and sleep times for the treble clef and bass represented by variables. a being the treble clef. b being the treble bass, and c is the sleep times for each treble
+canon="C:/Users/nicholas_fortunato/Desktop/canon1.wav"
+canon_end="C:/Users/nicholas_fortunato/Desktop/canon_end.wav"
+#part 1 is where I call the array to play the variables
+i=0
+8.times do
+  play a[i], sustain: 3
+  play b[i], sustain: 3
+  sleep c[i]
+  i=i+1
+end
+#part 2 is where I defined the melody to play
+define :melody do
+  play :E5, sustain: rrand(2,3)
+  play :C5, sustain: 3
+  play :G4, sustain: 3
+  play :C3, sustain: 3
+  sleep 1.5
+  play :D5, sustain: 3
+  play :B4, sustain: 3
+  play :G4, sustain: 3
+  play :G3, sustain: 3
+  sleep 1.5
+  play :C5, sustain: 3
+  play :A4, sustain: 3
+  play :E5, sustain: 3
+  play :A3, sustain: 3
+  sleep 1.5
+  play :B4, sustain: 3
+  play :G4, sustain: 3
+  play :E5, sustain: 3
+  play :E2, sustain: 3
+  sleep 1.5
+  play :A4, sustain: 3
+  play :F4, sustain: 3
+  play :C4, sustain: 3
+  play :F2, sustain: 3
+  sleep 1.5
+  play :G4, sustain: 3
+  play :E4, sustain: 3
+  play :C4, sustain: 3
+  play :A2, sustain: 3
+  sleep 1.5
+  play :A4, sustain: 3
+  play :F4, sustain: 3
+  play :C4, sustain: 3
+  play :F2, sustain: 3
+  sleep 1.5
+  play :B4, sustain: 3
+  play :G4, sustain: 3
+  play :D4, sustain: 3
+  play :G3, sustain: 3
+  sleep 1.5
+end
+melody #I call the defined melody to play
+#part 3 just uses different notes and sleep times
+play :E4, sustain: 3
+play :C4, sustain: 3
+play :G4, sustain: 3
+play :C2
+sleep 0.5
+play :G3
+sleep 0.5
+play :F4
+sleep 0.5
+play :G3
+sleep 0.5
+play :D4, sustain: 3
+play :B4, sustain: 3
+play :G4, sustain: 3
+play :B3
+sleep 0.5
+play :G3
+sleep 0.5
+play :B4, sustain: 2
+play :E2
+sleep 0.5
+play :G3
+sleep 0.5
+play :C4, sustain: 3
+play :A4, sustain: 3
+play :E4, sustain: 3
+play :A2
+sleep 0.5
+play :E3
+sleep 0.5
+play :C4
+sleep 0.5
+play :E3
+sleep 0.5
+play :B4, sustain: 3
+play :G4, sustain: 3
+play :E4, sustain: 3
+play :G2
+sleep 0.5
+play :E3
+sleep 0.5
+play :D4, sustain: 3
+play :B3
+sleep 0.5
+play :E3
+sleep 0.5
+play :A4, sustain: 3
+play :F4, sustain: 3
+play :C4, sustain: 3
+play :F2
+sleep 0.5
+play :C3
+sleep 0.5
+play :A3
+sleep 0.5
+play :C3
+sleep 0.5
+play :G4, sustain: 3
+play :E4, sustain: 3
+play :C4, sustain: 3
+play :E2
+sleep 0.5
+play :C3
+sleep 0.5
+play :E4, sustain: 3
+play :G3
+sleep 0.5
+play :C3
+sleep 0.5
+play :A4, sustain: 3
+play :F4, sustain: 3
+play :C4, sustain: 3
+play :F2
+sleep 0.5
+play :C3
+sleep 0.5
+play :A3
+sleep 0.5
+play :C3
+sleep 0.5
+play :B4, sustain: 3
+play :G4, sustain: 3
+play :D4, sustain: 3
+play :G2
+sleep 0.5
+play :D3
+sleep 0.5
+play :F4, sustain: rrand(2,3) #I randomize the sustain times between 2 and 3 seconds
+play :B3
+sleep 0.5
+play :D3
+sleep 0.5
+#part 4
+play :C5
+play :C3
+sleep 0.5
+play :B4
+play :G3
+sleep 0.5
+play :C5
+play :D4
+sleep 0.5
+play :G3
+sleep 0.5
+play :G4
+play :B2
+sleep 0.5
+play :G3
+sleep 0.5
+play :B4
+play :C3
+sleep 0.5
+play :G3
+sleep 0.5
+play :C5
+play :A2
+sleep 0.5
+play :E3
+sleep 0.5
+play :E5
+play :C3
+sleep 0.5
+play :E3
+sleep 0.5
+play :G5
+play :G2
+sleep 0.5
+play :E5
+play :E3
+sleep 0.5
+play :G5
+play :B3
+sleep 0.5
+play :A5
+play :E3
+sleep 0.5
+play :F5
+play :F2
+sleep 0.5
+play :E5
+play :C3
+sleep 0.5
+play :D5
+play :A3
+sleep 0.5
+play :F5
+play :C3
+sleep 0.5
+play :E5
+play :E2
+sleep 0.5
+play :D5
+play :C3
+sleep 0.5
+play :C5
+play :G3
+sleep 0.5
+play :B4
+play :C3
+sleep 0.5
+play :A4
+play :F2
+sleep 0.5
+play :G4
+play :C3
+sleep 0.5
+play :A4
+play :A3
+sleep 0.5
+play :C4
+play :C3
+sleep 0.5
+play :C4
+play :G2
+sleep 0.5
+play :D3
+sleep 0.5
+play :C4
+play :B3
+sleep 0.5
+play :B4
+play :D3
+sleep 0.5
+#part 5
+play :C5
+play :C3
+sleep 0.5
+play :B4
+play :G3
+sleep 0.5
+play :C5
+play :D4
+sleep 0.5
+play :G3
+sleep 0.5
+play :G4
+play :B2
+sleep 0.5
+play :G3
+sleep 0.5
+play :B4
+play :C3
+sleep 0.5
+play :G3
+sleep 0.5
+play :C5
+play :A2
+sleep 0.5
+play :E3
+sleep 0.5
+play :E5
+play :C3
+sleep 0.5
+play :E3
+sleep 0.5
+play :G5
+play :G2
+sleep 0.5
+play :E5
+play :E3
+sleep 0.5
+play :G5
+play :B3
+sleep 0.5
+play :A5
+play :E3
+sleep 0.5
+play :F5
+play :F2
+sleep 0.5
+play :E5
+play :C3
+sleep 0.5
+play :D5
+play :A3
+sleep 0.5
+play :F5
+play :C3
+sleep 0.5
+play :E5
+play :E2
+sleep 0.5
+play :D5
+play :C3
+sleep 0.5
+play :C5
+play :G3
+sleep 0.5
+play :B4
+play :C3
+sleep 0.5
+play :A4
+play :F2
+sleep 0.5
+play :G4
+play :C3
+sleep 0.5
+play :A4
+play :A3
+sleep 0.5
+play :C4
+play :C3
+sleep 0.5
+play :C4
+play :G2
+sleep 0.5
+play :D3
+sleep 0.5
+play :C4
+play :B3
+sleep 0.5
+play :E4
+play :D3
+sleep 0.5
+#part 6 is where the sample is played set to play a full runthrough only once
+1.times do
+  sample canon, amp: 3
+  sleep 51.7
+end
+#part 7 I also defined as a function called melody2 which is then called to play at the end
+define :melody2 do
+  play :C5
+  play :C3
+  sleep 1.5
+  play :G4
+  sleep 0.5
+  play :C5
+  sleep 0.5
+  play :E5
+  sleep 0.5
+  play :G2
+  sleep 0.25
+  play :G4
+  sleep 0.5
+  play :B4
+  sleep 0.5
+  play :D5
+  sleep 0.5
+  play :A2
+  sleep 0.25
+  play :E4
+  sleep 0.5
+  play :A4
+  sleep 0.5
+  play :C5
+  sleep 0.5
+  play :E2
+  sleep 0.25
+  play :E4
+  sleep 0.5
+  play :E4
+  sleep 0.5
+  play :G4
+  sleep 0.5
+  play :F2
+  sleep 0.5
+  play :C4
+  sleep 0.5
+  play :F4
+  sleep 0.5
+  play :A4
+  sleep 0.5
+  play :G1
+  sleep 0.5
+  play :C4
+  sleep 0.5
+  play :E4
+  sleep 0.5
+  play :G4
+  sleep 0.5
+  play :F2
+  sleep 0.5
+  play :C4
+  sleep 0.5
+  play :F4
+  sleep 0.5
+  play :A4
+  sleep 0.5
+  play :G2
+  sleep 0.5
+  play :D4
+  sleep 0.5
+  play :G4
+  sleep 0.5
+  play :B4
+  sleep 0.5
+  play :E5
+  play :C3
+  sleep 0.5
+  play :G3
+  sleep 0.5
+  play :E5
+  play :E4
+  sleep 0.5
+  play :F5
+  play :G3
+  sleep 0.5
+  play :G5
+  play :B2
+  sleep 0.5
+  play :B5
+  play :G3
+  sleep 0.5
+  play :G5
+  play :D4
+  sleep 0.5
+  play :F5
+  play :G3
+  sleep 0.5
+  play :E5
+  play :A2
+  sleep 0.5
+  play :E3
+  sleep 0.5
+  play :C5
+  play :C4
+  sleep 0.5
+  play :D5
+  play :E3
+  sleep 0.5
+  play :E5
+  play :G2
+  sleep 0.5
+  play :F5
+  play :E3
+  sleep 0.5
+  play :E5
+  play :B3
+  sleep 0.5
+  play :D5
+  play :E3
+  sleep 0.5
+  #
+  play :C5
+  play :C3
+  sleep 0.5
+  play :G3
+  sleep 0.5
+  play :A4
+  play :E4
+  sleep 0.5
+  play :C5
+  play :G3
+  sleep 0.5
+  play :G4
+  play :B2
+  sleep 0.5
+  play :B4
+  play :G3
+  sleep 0.5
+  play :G4
+  play :D4
+  sleep 0.5
+  play :C5
+  play :G3
+  sleep 0.5
+  play :A4
+  play :A2
+  sleep 0.5
+  play :B4
+  play :E3
+  sleep 0.5
+  play :A4
+  play :C4
+  sleep 0.5
+  play :C5
+  play :E3
+  sleep 0.5
+  play :C5
+  play :G2
+  sleep 0.5
+  play :E3
+  sleep 0.5
+  play :E5
+  play :B3
+  sleep 0.5
+  play :F5
+  play :E3
+  sleep 0.5
+end
+
+melody2
+#part 8 is where I include another sample
+1.times do
+  sample canon_end, amp: 3
+  sleep 58
+end
