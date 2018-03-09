@@ -1,32 +1,28 @@
-=begin
-
-TASK 1: Define a function that has 5 parameters (four notes and one sleep time). Hit "Run" and nothing should play.
-
-TASK 2: Call your function and give it five arguments (the four notes on lines 16, 18, 20, & 22 plus the sleep time). Hit run and you should hear four notes play.
-
-TASK 3: Call your function twice in a live_loop so the entire Stranger Things Theme repeats.
-
-=end
-
+#define your function with parameters
 use_bpm 160
 use_synth :saw
 
-
-#define your function with parameters
-define :play_eighth_notes do |n| #defined the function with the variable'n' as the parameter
-#n is the variable 
-  play n #plays the notes below but as the form of a variable.
-  sleep 0.5
+define :play_eighth_notes do |n1, n2, n3, n4, sl|
+  play n1
+  sleep sl
+  play n2
+  sleep sl
+  play n3
+  sleep sl
+  play n4
+  sleep sl
 end
 
-live_loop :play_eighth_notes do #plays the notes ^
-  play_eighth_notes :c2
-  play_eighth_notes :e2
-  play_eighth_notes :g2
-  play_eighth_notes :b2
-  #call your function with the notes you want to play as arguments
-  play_eighth_notes :c3
-  play_eighth_notes :b2
-  play_eighth_notes :g2
-  play_eighth_notes :e2
+play_eighth_notes :c2, :e2, :g2, :b2, 0.5
+
+define :play_eighth_notes1 do |n1, n2, n3, n4, sl|
+  play n1
+  sleep sl
+  play n2
+  sleep sl
+  play n3
+  sleep sl
+  play n4
+  sleep sl
 end
+play_eighth_notes1 :c3, :b2, :g2, :e2, 0.5
