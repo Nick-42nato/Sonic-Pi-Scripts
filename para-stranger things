@@ -13,12 +13,13 @@ use_synth :saw
 
 
 #define your function with parameters
-define :play_eighth_notes do |n|
-  play n
+define :play_eighth_notes do |n| #defined the function with the variable'n' as the parameter
+#n is the variable 
+  play n #plays the notes below but as the form of a variable.
   sleep 0.5
 end
 
-live_loop :play_eighth_notes do
+live_loop :play_eighth_notes do #plays the notes ^
   play_eighth_notes :c2
   play_eighth_notes :e2
   play_eighth_notes :g2
