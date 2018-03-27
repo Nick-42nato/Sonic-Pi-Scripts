@@ -1,0 +1,49 @@
+#EXHIBITION SONG by Nick
+
+chorus="C:/Users/nicholas_fortunato/Desktop/Animals1.wav"
+chorus2="C:/Users/nicholas_fortunato/Desktop/Animals.wav"
+chorus3="C:/Users/nicholas_fortunato/Desktop/Virus...wav"
+chorus4="C:/Users/nicholas_fortunato/Desktop/Martin Garrix  MOTi - Virus (How About Now) [Available October 13].wav"
+drop1="C:/Users/nicholas_fortunato/Desktop/Afrojack  Martin Garrix - Turn Up The Speakers (Original Mix).wav"
+drop2="C:/Users/nicholas_fortunato/Desktop/Dimitri Vegas  Like Mike vs DVBBS  Borgeous - Stampede (Original Mix).wav"
+drop3="C:/Users/nicholas_fortunato/Desktop/drop.wav"
+ending="C:/Users/nicholas_fortunato/Desktop/end.wav"
+#variables listing all my samples
+c = [1, 2, 1]
+#array for my amp times
+define :bass do |t|
+  10.times do
+    sample :bd_808, amp: rrand(5,10)
+    sleep t
+  end
+end
+#function
+define :landing do
+  4.times do
+    sample :ambi_lunar_land
+    puts :comet_landing
+  end
+end
+#function
+define :build do
+  4.times do
+    use_synth :beep
+    notes = scale(:e3, :minor_pentatonic, num_octaves: 1)
+    use_random_seed 679
+    with_fx :echo, phase: 0.125, mix: 0.4, reps: 16 do
+      sleep 0.25
+      play notes.choose, attack: 0, release: 0.1, pan: (range -1, 1, step: 0.125).tick, amp: rrand(2, 2.5)
+    end
+  end
+end
+#function
+live_loop :track1 do
+  bass 0.5
+  sleep 2
+end
+#live loop
+build
+
+sleep 0.25
+landing
+sleep 3
